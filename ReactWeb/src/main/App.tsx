@@ -18,17 +18,17 @@ function App() {
     //container is a bootstrap class that will serve as container
     //for the rest of the layout
     //*Add BrowserRouter. It is the component that makes routing possible
+
+    //*BrowserRouter component contains RoutesComponent. The ID of RoutesComponent
+    //*is that it has child route. RoutesComponent will look at URL and do its best 
+    //*to match it. RoutesComponent is the container for navigation
     <BrowserRouter>  
     <div className="container">
       <Header subtitle="Providing houses all over the world"/>
-      
-      //*BrowserRouter component contains RoutesComponent. The ID of RoutesComponent
-      //*is that it has child route. RoutesComponent will look at URL and do its best 
-      //*to match it. RoutesComponent is the container for navigation
       <Routes>  
         //*Right now the only route we have is the root url. When the root url is 
         //*hit render the houselist
-        <Route path="/" element={<HouseList />} />
+        <Route path="/" element={<HouseList />}></Route>
         <Route path="/house/:id" element={<HouseDetail />}></Route>
       </Routes>
     </div>
