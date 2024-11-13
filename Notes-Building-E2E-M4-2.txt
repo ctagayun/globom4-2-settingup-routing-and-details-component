@@ -253,10 +253,19 @@ Module 4: Adding Frontend Routing and Navigation
             - let's create the HouseDetailComponent: 
                 - add HouseDetail.tsx
 
-        - Navigating from HouseList to HouseDetailComponent
+    3. Navigating from HouseList to HouseDetailComponent
            - https://app.pluralsight.com/ilx/video-courses/fbbac3b2-0e56-464b-92f2-0b877f92f12c/8c582716-546d-4dbb-a88c-51541498ae9f/10f290ba-ceb4-47ea-ab2c-a45cfedd8c0c
 
            - go to HouseListComponent and add:
                const nav = useNavigate();
-               
 
+      Notes on Navigation Using useNavigation:
+        - calling useNavigate is different than doing a redirect.
+        - the function will not create a request to the server
+        - it will use the internal routing system
+
+      Notes on Navigation Using redirect:
+        - a normal redirec using window location href, for example will 
+        load the entire application will be reloaded from the server after which the 
+        routing mechanism will determine the right component to dispaly
+       
